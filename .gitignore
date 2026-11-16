@@ -1,0 +1,20 @@
+# Documentation and synthetic examples only.
+.local/
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.pyc
+*.log
+*.zip
+*.exe
+*.dll
+*.pdb
+tasks/
+results/
+workbuddy_jobs/
+*profile*/
+extension/config.js
+credentials*
+secrets*

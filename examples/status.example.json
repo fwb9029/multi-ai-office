@@ -1,0 +1,31 @@
+{
+  "synthetic": true,
+  "observed_at": "2026-11-16T00:00:00Z",
+  "queue": {
+    "mode": "serial",
+    "paused": false
+  },
+  "members": [
+    {
+      "id": "codex",
+      "display_state": "awaiting_review",
+      "reason": "合成示例：结果已收回待验收"
+    },
+    {
+      "id": "doubao",
+      "display_state": "delivered",
+      "reason": "合成示例：正文已交回"
+    },
+    {
+      "id": "workbuddy",
+      "display_state": "idle",
+      "reason": "合成示例：没有登记中的执行步骤"
+    },
+    {
+      "id": "deepseek_harness",
+      "display_state": "idle",
+      "reason": "合成示例：本例无余额消费"
+    }
+  ],
+  "note": "概念示例，不是原型HTTP接口字段契约，不代表实际连接或工作状态。"
+}

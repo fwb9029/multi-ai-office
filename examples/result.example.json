@@ -1,0 +1,15 @@
+{
+  "synthetic": true,
+  "example_task_id": "example-task-001",
+  "execution_status": "collected",
+  "content_reviewed": false,
+  "text": "虚构结果：说明已收回正文和文件元数据，尚未通过内容验收。",
+  "artifacts": [
+    {
+      "relative_path": "activity-note.md",
+      "kind": "markdown",
+      "exists_in_this_repository": false
+    }
+  ],
+  "note": "解释用概念结构，不是原型结果文件的完整格式。"
+}

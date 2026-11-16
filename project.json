@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "schema_note": "AI documentation index, not original prototype runtime configuration.",
+  "name": "multi-ai-office",
+  "display_name": "小小指挥部",
+  "language": "zh-CN",
+  "as_of": "2026-11-16",
+  "artifact_scope": "documentation_and_synthetic_examples",
+  "runtime_source_included": false,
+  "installer_included": false,
+  "goal": "只向Codex提需求，由它准备材料、派工、收回、验收和交付，免费优先。",
+  "entrypoints": {
+    "human": "README.md",
+    "ai": "AI_START_HERE.md",
+    "instructions": "AGENTS.md"
+  },
+  "prototype_platform": "Windows",
+  "execution_mode": "serial_steps",
+  "members": [
+    {
+      "id": "codex",
+      "role": "orchestrator_and_reviewer",
+      "verified_scope": [
+        "organize_context",
+        "dispatch",
+        "review_actual_results"
+      ]
+    },
+    {
+      "id": "doubao",
+      "role": "draft_and_revise",
+      "connection": "logged_in_Edge_web_via_extension",
+      "verified_scope": [
+        "draft",
+        "revise_with_previous_text",
+        "collect_final_reply"
+      ],
+      "billing": "free_web_first_platform_limits_apply"
+    },
+    {
+      "id": "workbuddy",
+      "role": "local_files_and_deliverables",
+      "connection": "logged_in_desktop_UI_via_loopback",
+      "verified_scope": [
+        "text_to_file_handoff",
+        "teaching_PPT_and_standalone_HTML",
+        "matching_exercises",
+        "synthetic_student_report_and_revision"
+      ],
+      "billing": "platform_account_rules_usage_not_fully_audited"
+    },
+    {
+      "id": "deepseek_harness",
+      "role": "optional_backup",
+      "connection": "logged_in_desktop_UI_via_loopback",
+      "verified_scope": [
+        "one_approved_short_text_test"
+      ],
+      "complex_tasks_verified": false,
+      "billing": "balance_explicit_authorization_required"
+    }
+  ],
+  "principles": {
+    "free_first": true,
+    "paid_fallback": false,
+    "automatic_retry_on_uncertainty": false,
+    "review_required": true,
+    "credentials_exported": false,
+    "share_all_private_skills": false,
+    "login_and_verification": "account_owner",
+    "global_configuration_changes": "separate_user_authorization"
+  },
+  "status_display": {
+    "scope": "registered_local_tasks_and_authorized_local_Codex_hook_metadata",
+    "hook_body_saved": false,
+    "all_manual_tool_activity_observed": false,
+    "heartbeat_available": false,
+    "stale_active_after_minutes": 15,
+    "animation_triggers_model_calls": false
+  },
+  "not_yet_verified": [
+    "Feishu_document_read_write",
+    "Jinshan_document_read_write",
+    "portable_install_on_second_PC",
+    "concurrent_execution",
+    "long_term_stability",
+    "DeepSeek_complex_work",
+    "PPT_to_HTML_auto_launch",
+    "real_teaching_effectiveness"
+  ],
+  "documents": [
+    "docs/architecture.md",
+    "docs/workflow-and-states.md",
+    "docs/verified-and-limits.md",
+    "docs/reproduction-and-sharing.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "examples": [
+    "examples/plan.example.json",
+    "examples/result.example.json",
+    "examples/status.example.json"
+  ]
+}
